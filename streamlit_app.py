@@ -75,9 +75,6 @@ st.json({
     'c2': [10, 20, 30, 40],
 })
 
-fig, ax = plt.subplots()
-ax.hist(x=x, bins=15)
-st.pyplot(fig)
 import streamlit as st
  
 name = st.text_input(label='Nama lengkap', value='')
