@@ -3,7 +3,7 @@ import streamlit as st
 st.write(
     """
     # My first app
-    Hello World, Ini Project Streamlit Saya Sri Melati_4232401025!
+    Hello World, Ini Project Streamlit Saya Sri Melati & 4232401025!
     """
 )
 import streamlit as st
@@ -14,7 +14,7 @@ st.write(pd.DataFrame({
     'c2': [10, 20, 30, 40],
 })) 
 import streamlit as st 
-
+ 
 st.markdown(
     """
     # My first app
@@ -74,8 +74,16 @@ st.json({
     'c1': [1, 2, 3, 4],
     'c2': [10, 20, 30, 40],
 })
+
+import matplotlib.pyplot as plt
 import numpy as np
 import streamlit as st
+ 
+x = np.random.normal(15, 5, 250)
+ 
+fig, ax = plt.subplots()
+ax.hist(x=x, bins=15)
+st.pyplot(fig)
 import streamlit as st
  
 name = st.text_input(label='Nama lengkap', value='')
@@ -106,7 +114,7 @@ import streamlit as st
 picture = st.camera_input('Take a picture')
 if picture:
     st.image(picture)
-import streamlit as st
+    import streamlit as st
  
 if st.button('Say hello'):
     st.write('Hello there')
