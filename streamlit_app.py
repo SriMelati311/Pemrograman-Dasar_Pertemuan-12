@@ -75,7 +75,6 @@ st.json({
     'c2': [10, 20, 30, 40],
 })
 
-import matplotlib.pyplot as plt
 import numpy as np
 import streamlit as st
  
