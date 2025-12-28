@@ -75,7 +75,6 @@ st.json({
     'c2': [10, 20, 30, 40],
 })
 
-import numpy as np
 import streamlit as st
  
 x = np.random.normal(15, 5, 250)
