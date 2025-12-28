@@ -75,8 +75,6 @@ st.json({
     'c2': [10, 20, 30, 40],
 })
 
-import streamlit as st
- 
 x = np.random.normal(15, 5, 250)
  
 fig, ax = plt.subplots()
