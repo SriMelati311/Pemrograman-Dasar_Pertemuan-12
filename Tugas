@@ -1,0 +1,61 @@
+import streamlit as st
+ 
+st.title('Pemrograman Dasar')
+import streamlit as st
+ 
+st.header('Tugas Pertemuan 12 - Streamlit')
+import streamlit as st
+ 
+st.subheader('Menampilkan Komponen Dasar Streamlit')
+import streamlit as st
+ 
+st.caption('Dashbord ini menampilkan berbagai komponen Streamlit, mulai dari penulisan teks, tampilan data, hingga visualisasi grafik untuk mendukung analisis data. ')
+
+import streamlit as st
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+st.text('Aplikasi dashboard ini dibuat menggunakan framework Streamlit untuk menampilkan berbagai komponen antarmuka web secara sederhana dan interaktif. Penggunaan Streamlit memudahkan pengembang dalam menyajikan data dan informasi secara cepat tanpa perlu membangun aplikasi web yang kompleks, sehingga sangat cocok digunakan untuk keperluan analisis data dan pembelajaran.')
+
+st.subheader('Contoh Potongan Kode')
+code_example ="""
+import streamlit as st
+
+st.title("Hello Streamlit!")
+"""
+st.code(code_example, language='python')
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+
+st.subheader("Data Jumlah Sampah Terkumpul")
+
+data = {
+    "Hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+    "Jumlah Sampah (kg)": [120, 150, 130, 170, 160]
+}
+
+df = pd.DataFrame(data)
+
+st.dataframe(df)
+
+st.subheader("Grafik Batang Jumlah Sampah per Hari")
+
+fig_bar, ax_bar = plt.subplots()
+ax_bar.bar(df["Hari"], df["Jumlah Sampah (kg)"])
+ax_bar.set_xlabel("Hari")
+ax_bar.set_ylabel("Jumlah Sampah (kg)")
+ax_bar.set_title("Grafik Batang Jumlah Sampah Terkumpul")
+
+st.pyplot(fig_bar)
+
+st.subheader("Grafik Garis Jumlah Sampah per Hari")
+
+fig_line, ax_line = plt.subplots()
+ax_line.plot(df["Hari"], df["Jumlah Sampah (kg)"], marker='o')
+ax_line.set_xlabel("Hari")
+ax_line.set_ylabel("Jumlah Sampah (kg)")
+ax_line.set_title("Grafik Garis Jumlah Sampah Terkumpul")
+
+st.pyplot(fig_line)
